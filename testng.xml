@@ -13,6 +13,9 @@
             <class name="com.api.framework.users.tests.CreateUserErrorScenariosTest"/>
             <class name="com.api.framework.users.tests.CreateUserTest"/>
             <class name="com.api.framework.users.tests.GetUserTest"/>
+            <class name="com.api.framework.users.tests.DeleteUserTest"/>
+            <class name="com.api.framework.users.tests.UpdateUserTest"/>
+            <class name="com.api.framework.users.tests.UserCRUDTest"/>
         </classes>
     </test>
 </suite>

@@ -30,9 +30,17 @@ public class RestUtils {
     }
 
 
-    public static Response patch(String endPoint, String requestPayload, Map<String,String> headers) {
+    public static Response patch(String endPoint, Object requestPayload, Map<String,String> headers) {
         RequestSpecification requestSpecification = getRequestSpecification(endPoint, headers);
         Response response =  requestSpecification.body(requestPayload).patch();
+        ApiLoggerUtil.logRequest(requestSpecification);
+        ApiLoggerUtil.logResponse(response);
+        return response;
+    }
+
+    public static Response put(String endPoint, Object requestPayload, Map<String,String> headers) {
+        RequestSpecification requestSpecification = getRequestSpecification(endPoint, headers);
+        Response response =  requestSpecification.body(requestPayload).put();
         ApiLoggerUtil.logRequest(requestSpecification);
         ApiLoggerUtil.logResponse(response);
         return response;
